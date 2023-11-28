@@ -4,6 +4,7 @@
 namespace models;
 
 use core\database\DBQuery;
+use core\database\Where;
 
 class Proprietario{
 
@@ -56,6 +57,27 @@ class Proprietario{
         return( $this->dbquery->select());
         
     }
+    function login( $email, $senha ){
+        
+        $where = new Where();
+        $where->addCondition('AND', 'ativo', '=', 'S');
+        $where->addCondition('AND', 'email', '=', $email );
+        $where->addCondition('AND', 'senha', '=', $senha );
+        $resultSet = $this->dbquery->selectFiltered($where);
+        
+        if ( $resultSet->rowCount() > 0){
+            \session_start();
+            foreach ( $resultSet as $row ){
+                $_SESSION["idUsuarioProp"] == $row['idproprietario'];
+            }
+            
+            return( true );
+        }else{
+            return( false );
+        }
+        return( false );
+    }
+    
     
     public function save() {
         if($this->getIdProprietario() == 0){
@@ -85,7 +107,7 @@ class Proprietario{
         
         if ($rSet) {
             foreach ($rSet as $linha) {
-                $IdProprietario      = $linha['idproprietario'];
+                $idproprietario      = $linha['idproprietario'];
                 $nome        = $linha['nome'];
                 $sobrenome           = $linha['sobrenome'];
                 $email           = $linha['email'];
@@ -95,11 +117,12 @@ class Proprietario{
                 $nacionalidade           = $linha['nacionalidade'];
                 $nascimento           = $linha['nascimento'];
                 $ativo     = $linha['ativo'];
+                $senha     = $linha['admin'];
+                
                 $admin     = $linha['senha'];      
-                $senha     = $linha['senha'];
                 
                 
-               $proprietario[] = new Proprietario($IdProprietario, $nome, $sobrenome,$email, $cpf, $endereco, $telefone, $nacionalidade, $nascimento, $ativo, $senha, $admin );                }
+               $proprietario[] = new Proprietario($idproprietario, $nome, $sobrenome,$email, $cpf, $endereco, $telefone, $nacionalidade, $nascimento, $ativo, $senha, $admin );                }
         } else {
             $proprietario[] = array();
             echo  "{'msg':'Nenhum proprietario encontrado.\n'}";
@@ -114,10 +137,10 @@ class Proprietario{
     }
     
     
-    function populate( $IdProprietario, $nome, $sobrenome,$email, $cpf, $endereco, $telefone, $nacionalidade, $nascimento, $ativo, $senha, $admin ) {
+    function populate( $idproprietario, $nome, $sobrenome,$email, $cpf, $endereco, $telefone, $nacionalidade, $nascimento, $ativo, $senha, $admin ) {
         
         
-        $this->setId( $IdProprietario );
+        $this->setIdProprietario( $idproprietario );
         $this->setNome( $nome );
         $this->setSobrenome( $sobrenome );
         $this->setEmail( $email );
@@ -139,7 +162,7 @@ class Proprietario{
         return $this->IdProprietario;
     }
     
-    public function setId($IdProprietario) {
+    public function setIdProprietario($IdProprietario) {
         $this->IdProprietario = $IdProprietario;
     }
     

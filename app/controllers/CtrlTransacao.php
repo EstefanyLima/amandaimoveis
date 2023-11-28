@@ -4,17 +4,17 @@ use models\Transacao;
 
 error_reporting(0); // error_reporting(E_ALL);
 
+$idtransacao = $_REQUEST['Id']??$_REQUEST[1];
+$idimovel      = $_REQUEST['idimovel']??[2];
+$cliente_id   = $_REQUEST['cliente_id']??[3];
+$tipo_transacao  = $_REQUEST['tipo_transacao']??[4];
+$data_transacao   = $_REQUEST['data_transacao']??[5];
+$valor_transacao   = $_REQUEST['valor_transacao']??[6];
 
 
-$idtransacao  = $_REQUEST[1];
-$idimovel  = $_REQUEST[2];
-$cliente_id  = $_REQUEST[3];
-$tipo_transacao       = $_REQUEST[4];
-$data_transacao      = $_REQUEST[5];
-$valor_transacao   = $_REQUEST[6];
 
 
-$action = $_REQUEST[7];
+$action = $_REQUEST['acao']??$_REQUEST[7];
 
 switch ($action) {
     case 'insert':

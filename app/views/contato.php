@@ -2,14 +2,16 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Amanda Imóveis - Contato</title>
+<title> Amanda Imóveis - Contato</title>
+<link rel="shortcut icon" href="public/assets/images/imglogo.ico">
 <link rel="stylesheet" href="public/assets/css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <link rel="stylesheet" type="text/css"
 	href="public/assets/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="public/assets/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
 @import
 	url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap')
@@ -74,6 +76,7 @@ span a:hover {
 a {
 text-decoration: none;
 }
+
 </style>
 </head>
 <body>
@@ -81,7 +84,7 @@ text-decoration: none;
 <!-- menu offcanvas -->
 	<nav class="navbar bg-white shadow-sm fixed-top p-2 navbar-dark">
   <div class="container-fluid">
-    <img class="img2" src="public/assets/images/logotxt.png">
+      <img class="img2" src="public/assets/images/logotxt.png"> 
    <img class=" navbar-brand img ms-auto" src="public/assets/images/imglogo.png">
    <div class="p-3 ms-auto">
 				<button type="button" class="btn" data-bs-toggle="modal"
@@ -100,17 +103,17 @@ text-decoration: none;
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-						<li class="nav-item"><a class="nav-link text-dark" href="home"><i
+						<li class="nav-item"><a class="nav-link text-dark" style="font-size: 1.2em" href="home"><i
 								class="bi bi-house-door-fill"></i> Home</a></li>
-						<li class="nav-item"><a class="nav-link text-dark" href="imoveis">
+						<li class="nav-item"><a class="nav-link text-dark" style="font-size: 1.2em"href="imoveis">
 								<i class="bi bi-houses-fill"></i> Imóveis
 						</a></li>
 						<li class="nav-item"><a class="nav-link text-dark"
-							href="anunciarimovel"><i class="bi bi-house-check-fill"></i>
+							style="font-size: 1.2em"href="anunciarimovel"><i class="bi bi-house-check-fill"></i>
 								Cadastrar Imóvel</a></li>
-						<li class="nav-item"><a class="nav-link text-dark" href="#"><i
+						<li class="nav-item"><a class="nav-link text-dark"  style="font-size: 1.2em" href="#"><i
 								class="bi bi-envelope-fill"></i> Contato</a></li>
-						<li class="nav-item"><a class="nav-link text-dark" href="sobrenos"><i
+						<li class="nav-item"><a class="nav-link text-dark" style="font-size: 1.2em"href="sobrenos"><i
 								class="bi bi-people-fill"></i> A Imobiliária</a></li>
 					</ul>
       </div>
@@ -138,11 +141,6 @@ text-decoration: none;
 							<button class="nav-link active" id="home-tab"
 								data-bs-toggle="tab" data-bs-target="#home" type="button"
 								role="tab" aria-controls="home" aria-selected="true">Entrar</button>
-						</li>
-						<li class="nav-item" role="presentation">
-							<button class="nav-link" id="profile-tab" data-bs-toggle="tab"
-								data-bs-target="#profile" type="button" role="tab"
-								aria-controls="profile" aria-selected="false">Cadastrar</button>
 						</li>
 						<li class="nav-item" role="presentation">
 							<button class="nav-link" id="contact-tab" data-bs-toggle="tab"
@@ -178,35 +176,6 @@ text-decoration: none;
 
 						<!--  Fim Entrar -->
 
-						<div class="tab-pane fade" id="profile" role="tabpanel"
-							aria-labelledby="CadastroTab">
-
-							<form id="CadTab">
-								<div class="form-floating mb-3 mt-3">
-									<input type="text" class="form-control rounded-3"
-										id="floatingInputN" placeholder="name"> <label
-										for="floatingInput">Nome: </label>
-								</div>
-
-								<div class="form-floating mb-3 mt-3">
-									<input type="email" class="form-control rounded-3"
-										id="floatingInputE" placeholder="name@example.com"> <label
-										for="floatingInput">Email: </label>
-								</div>
-								<div class="form-floating mt-3">
-									<input type="password" class="form-control rounded-3"
-										id="floatingPassword2" placeholder="Password"> <label
-										for="floatingPassword">Senha:</label>
-								</div>
-								<div class="form-floating mt-3">
-									<input type="password" class="form-control rounded-3"
-										id="floatingPassword3" placeholder="Password"> <label
-										for="floatingPassword">Repetir senha:</label>
-								</div>
-								<button type="submit" class="btn btn-block mt-3"
-									style="background-color: #08283B; color: #fff; width: 100%">Entrar</button>
-							</form>
-						</div>
 						<div class="tab-pane fade" id="contact" role="tabpanel"
 							aria-labelledby="LembrarTab">
 							<h5 class="mt-3">Redefinir senha</h5>
@@ -262,7 +231,7 @@ text-decoration: none;
   <textarea class="form-control" id="mensagem" name="mensagem" style="height: 100px"></textarea>
   <label for="mensagem">Mais Informações</label>
 </div>
-			<input type="hidden" name="action" value="insert">
+			<input type="hidden" name="acao" value="insert">
 			<div class="col-12 text-center">
 				<button type="submit" class="btn text-white"
 					style="background-color: #08283B">Cadastrar</button>
@@ -296,14 +265,9 @@ text-decoration: none;
 
 	    function limparCampos() {
 	        $("#nome").val("");
-	        $("#sobrenome").val("");
 	        $("#email").val("");
-	        $("#cpf").val("");
-	        $("#endereco").val("");
 	        $("#telefone").val("");
-	        $("#nacionalidade").val("");
-	        $("#nascimento").val("");
-	        $("#profissao").val("");
+	        $("#mensagem").val("");
 	    }
 	});
 			
@@ -313,23 +277,23 @@ text-decoration: none;
 
 <!--  footer -->
 
- 
- <div class="mt-5 pt-5 pb-5 footer"style="background-color:#141414">
-<div class="container">
-  <div class="row">
+ <footer class="mt-5 pt-5 pb-5" style="background-color:#141414">
+    <div class="container">
+<div class="row">
     <div class="col-sm">
          <img id="img3" src="public/assets/images/logobranco.png">
           <h6 style="font-size: 100%;" class="pr-5 text-white">Sua casa dos sonhos está a um passo de distância. Conte conosco para encontrar o lar perfeito. Sua satisfação é a nossa prioridade. </h6>
       <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
     </div>
     <div class="col-sm text-white mt-3">
-      <h4 class="mt-lg-0 mt-sm-4">Localização</h4><br>
+      <h4 class="mt-lg-0 mt-sm-4">Contato</h4><br>
       <h5 style="font-size: 115%;">Amanda Barbosa dos Santos Imobiliária</h5>
       <h5 style="font-size: 115%;">(11) 98328-1626</h5>
       <h5 style="font-size: 115%;">B.s.Amanda@bol.com.br</h5>
     </div>
     <div class="col-sm mt-3">
 <div id="contact" class="map">
+      <h4 class="mt-lg-0 mt-sm-4 text-white">Localização</h4><br>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.660504595074!2d-46.3914681!3d-23.4004959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce884f63a47bad%3A0xdbe7735e1d239e49!2sAv.%20Serra%20da%20Mantiqueira%2C%20310%20-%20Vila%20Carmela%20I%2C%20Guarulhos%20-%20SP%2C%2007178-540!5e0!3m2!1spt-BR!2sbr!4v1700695884711!5m2!1spt-BR!2sbr" width="350" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    <br />
     <small>
         <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
@@ -338,15 +302,17 @@ text-decoration: none;
 
     </div>    
     </div>
-<div class="row mt-5 justify-content-center">
+ <div class="row mt-5 justify-content-center">
     <div class="col text-center">
-        <p class=""><small class="text-white">© 2023 Copyright:
+        <p class=""><small class="text-white">© 2023 Desenvolvido por:
             <a class="text-white" href="https://hostdeprojetosdoifsp.gru.br/starbridge/home.php">StarBridge</a></small></p>
     </div>
 </div>
 
-  </div>
-</div>
+    </div>
+</footer>
+
+  
 
   <!--  fim footer -->
 	

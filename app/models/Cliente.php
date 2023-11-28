@@ -1,6 +1,5 @@
 <?php
 
-
 namespace models;
 
 use core\database\DBQuery;
@@ -45,7 +44,7 @@ class Cliente{
             $this->getProfissao(),
             $this->getAtivo(),
             $this->getSenha(),
-            $this->getAdmin(),
+            $this->getAdmin()
         );
     }
     
@@ -66,7 +65,7 @@ class Cliente{
         $where->addCondition('AND', 'ativo', '=', 'S');
         $where->addCondition('AND', 'email', '=', $email );
         $where->addCondition('AND', 'senha', '=', $senha );
-        $where->addCondition('AND', 'admin', '=', 'S');
+        //$where->addCondition('AND', 'admin', '=', 'S');
         $resultSet = $this->dbquery->selectFiltered($where);
         
         if ( $resultSet->rowCount() > 0){
@@ -85,6 +84,7 @@ class Cliente{
     public function save() {
         if($this->getId() == 0){
             return( $this->dbquery->insert($this->toArray()));
+            
         }else{
             return( $this->dbquery->update($this->toArray()));
         }
@@ -121,8 +121,9 @@ class Cliente{
                 $nascimento           = $linha['nascimento'];
                 $profissao      = $linha['profissao'];
                 $ativo     = $linha['ativo'];
-                $admin     = $linha['senha'];
                 $senha     = $linha['senha'];
+                
+                $admin     = $linha['admin'];
                 
                 $cliente[] = new Cliente($Id, $nome, $sobrenome,$email, $cpf, $endereco, $telefone, $nacionalidade, $nascimento, $profissao, $ativo, $senha, $admin  );                }
         } else {
@@ -152,6 +153,9 @@ class Cliente{
         $this->setNacionalidade( $nacionalidade );
         $this->setNascimento( $nascimento);
         $this->setProfissao( $profissao );
+        $this->setAtivo( $ativo );
+        $this->setSenha( $senha );
+        $this->setAdmin( $admin );
         
         
     }

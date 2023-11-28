@@ -2,7 +2,9 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Amanda Imóveis - Imóveis</title>
+<title> Amanda Imóveis - Imóveis</title>
+<link rel="shortcut icon" href="public/assets/images/imglogo.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="public/assets/css/style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <link rel="stylesheet" type="text/css" href="public/assets/css/bootstrap.min.css">
@@ -89,7 +91,7 @@ border: none;
 	width: 60%;
 	margin: auto;
 }
--* 
+
 
 .modal-dialog {
  position: relative;
@@ -124,7 +126,9 @@ span a:hover {
 text-decoration: underline;
 color: #000;
 }
-
+a {
+text-decoration: none;
+}
 </style>
 </head>
 <body>
@@ -132,8 +136,8 @@ color: #000;
 <!-- menu offcanvas -->
 	<nav class="navbar bg-white shadow-sm fixed-top p-2 navbar-dark">
   <div class="container-fluid">
-    <img class="img2" src="public/assets/images/logotxt.png">
-   <img class=" navbar-brand img ms-auto" src="public/assets/images/imglogo.png">
+     <img class="img2" src="public/assets/images/logotxt.png">  
+  <img class=" navbar-brand img ms-auto" src="public/assets/images/imglogo.png">
    <div class="p-3 ms-auto">
 				<button type="button" class="btn" data-bs-toggle="modal"
 					data-bs-target="#myModal" 
@@ -151,17 +155,17 @@ color: #000;
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-						<li class="nav-item"><a class="nav-link text-dark" href="home"><i
+						<li class="nav-item"><a class="nav-link text-dark" style="font-size: 1.2em" href="home"><i
 								class="bi bi-house-door-fill"></i> Home</a></li>
-						<li class="nav-item"><a class="nav-link text-dark" href="imoveis">
+						<li class="nav-item"><a class="nav-link text-dark" style="font-size: 1.2em" href="imoveis">
 								<i class="bi bi-houses-fill"></i> Imóveis
 						</a></li>
 						<li class="nav-item"><a class="nav-link text-dark"
-							href="anunciarimovel"><i class="bi bi-house-check-fill"></i>
+							style="font-size: 1.2em" href="anunciarimovel"><i class="bi bi-house-check-fill"></i>
 								Cadastrar Imóvel</a></li>
-						<li class="nav-item"><a class="nav-link text-dark" href="contato"><i
+						<li class="nav-item"><a class="nav-link text-dark" style="font-size: 1.2em" href="contato"><i
 								class="bi bi-envelope-fill"></i> Contato</a></li>
-						<li class="nav-item"><a class="nav-link text-dark" href="sobrenos"><i
+						<li class="nav-item"><a class="nav-link text-dark" style="font-size: 1.2em" href="sobrenos"><i
 								class="bi bi-people-fill"></i> A Imobiliária</a></li>
 					</ul>
       </div>
@@ -188,11 +192,6 @@ color: #000;
 							<button class="nav-link active" id="home-tab"
 								data-bs-toggle="tab" data-bs-target="#home" type="button"
 								role="tab" aria-controls="home" aria-selected="true">Entrar</button>
-						</li>
-						<li class="nav-item" role="presentation">
-							<button class="nav-link" id="profile-tab" data-bs-toggle="tab"
-								data-bs-target="#profile" type="button" role="tab"
-								aria-controls="profile" aria-selected="false">Cadastrar</button>
 						</li>
 						<li class="nav-item" role="presentation">
 							<button class="nav-link" id="contact-tab" data-bs-toggle="tab"
@@ -228,35 +227,6 @@ color: #000;
 
 						<!--  Fim Entrar -->
 
-						<div class="tab-pane fade" id="profile" role="tabpanel"
-							aria-labelledby="CadastroTab">
-
-							<form id="CadTab">
-								<div class="form-floating mb-3 mt-3">
-									<input type="text" class="form-control rounded-3"
-										id="floatingInputN" placeholder="name"> <label
-										for="floatingInput">Nome: </label>
-								</div>
-
-								<div class="form-floating mb-3 mt-3">
-									<input type="email" class="form-control rounded-3"
-										id="floatingInputE" placeholder="name@example.com"> <label
-										for="floatingInput">Email: </label>
-								</div>
-								<div class="form-floating mt-3">
-									<input type="password" class="form-control rounded-3"
-										id="floatingPassword2" placeholder="Password"> <label
-										for="floatingPassword">Senha:</label>
-								</div>
-								<div class="form-floating mt-3">
-									<input type="password" class="form-control rounded-3"
-										id="floatingPassword3" placeholder="Password"> <label
-										for="floatingPassword">Repetir senha:</label>
-								</div>
-								<button type="submit" class="btn btn-block mt-3"
-									style="background-color: #08283B; color: #fff; width: 100%">Entrar</button>
-							</form>
-						</div>
 						<div class="tab-pane fade" id="contact" role="tabpanel"
 							aria-labelledby="LembrarTab">
 							<h5 class="mt-3">Redefinir senha</h5>
@@ -291,7 +261,7 @@ color: #000;
     <li class="breadcrumb-item active mt-5" aria-current="page">Imóveis</li>
   </ol>
 </nav>
-		<form class="d-flex flex-wrap mt-4 justify-content-center"  method="get">
+		<!-- <form class="d-flex flex-wrap mt-4 justify-content-center"  method="get">
 			<div class="selectpicker">
 				<select id="tipoImovelSelect">
 					<option selected hidden value="">Selecione o tipo de Imóvel</option>
@@ -316,7 +286,7 @@ color: #000;
 				</select>
 			</div>
 			<div class="select">
-				<select id="numQuartosSelect">
+				<select  id="numQuartosSelect">
 					<option selected hidden value="">N° de quartos</option>
 					<option value="ALLQUARTOS">Todos os Quartos</option>
 					<option value="UMQUARTO">1</option>
@@ -338,32 +308,34 @@ color: #000;
 
 		<div class="cardscenter">
 		<div id="cardsFiltrados" class="row mt-4">	
-				<!-- Aqui os cards filtrados serão inseridos pelo JavaScript -->
+				<!-- Aqui os cards filtrados serão inseridos pelo JavaScript 
 		</div>
 		</div>	
 		<!-- fim do search de imoveis -->
 		
-	
+
 
 
 
 
 </section>
 		<!-- cards imoveis -->
-			<div class="row mt-4">
-				<div class="col-md-4 mt-3">
+			<div class="row justify-content-center mt-4">
+				<div class="col-md-3 mt-3">
 					<div class="card h-80 mt-4" id="imovel6">
-						<img src="public/assets/images/casa.jpg" class="card-img-top"
-							alt="Palm Springs Road">
+					<img class="img-fluid"
+							src="public/assets/images/bambi4.jpg">
+					<div class="card-img-overlay">
+							<p class="card-title fw-bold  text-center text-white"style="background-color: #08283B;   position: absolute; top: .5rem;left: .5rem;font-size: .975rem;line-height: .975rem;width: 35%;padding: 3px 5px;border-radius: 10px;line-height: 26px;"
+								>Alugar</p>
+						</div>
+
 						<div class="card-body">
 							<div class="price mb-2">
-								<span style="color: #08283B">$1,291,000</span>
+								<span style="color: #08283B">R$700,00</span>
 							</div>
-							<span class="d-block mb-2 text-black-50">5232 Endereco Fake, Ave.
-								21BC</span> <span class="city d-block mb-3">São Paulo, Brasil</span>
-							<p class="card-text">This is a longer card with supporting text
-								below as a natural lead-in to additional content. This content
-								is a little bit longer.</p>
+							<span class="d-block mb-2 text-black-50">Parque Residencial Bambi, Guarulhos.
+								</span> <span class="city d-block mb-3">Bambi</span>
 							<a href="#" class="btn text-white"
 								style="background-color: #08283B">Mais detalhes</a> <span
 								class="tipo-imovel" data-tipo="APARTAMENTO"
@@ -374,19 +346,21 @@ color: #000;
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 mt-3">
+				<div class="col-md-3 mt-3">
 					<div class="card h-80 mt-4" id="imovel6">
-						<img src="public/assets/images/casa.jpg" class="card-img-top"
+						<img src="public/assets/images/itanhaem.png" class="card-img-top"
 							alt="Palm Springs Road">
+								<div class="card-img-overlay">
+							<p class="card-title fw-bold text-center text-white"style="background-color: #08283B;   position: absolute; top: .5rem;left: .5rem;font-size: .975rem;line-height: .975rem;width: 35%;padding: 3px 5px;border-radius: 10px;line-height: 26px;"
+								>Alugar</p>
+						</div>
+							
 						<div class="card-body">
 							<div class="price mb-2">
-								<span style="color: #08283B">$1,291,000</span>
+								<span style="color: #08283B">$1.200,00</span>
 							</div>
-							<span class="d-block mb-2 text-black-50">5232 Endereco Fake, Ave.
-								21BC</span> <span class="city d-block mb-3">São Paulo, Brasil</span>
-							<p class="card-text">This is a longer card with supporting text
-								below as a natural lead-in to additional content. This content
-								is a little bit longer.</p>
+							<span class="d-block mb-2 text-black-50">Litoral Itanhaém.
+								</span> <span class="city d-block mb-3">Itanhaém</span>
 							<a href="#" class="btn text-white"
 								style="background-color: #08283B">Mais detalhes</a> <span
 								class="tipo-imovel" data-tipo="APARTAMENTO"
@@ -397,19 +371,26 @@ color: #000;
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 mt-3">
+				<div class="col-md-3 mt-3">
 					<div class="card h-80 mt-4" id="imovel6">
-						<img src="public/assets/images/casa.jpg" class="card-img-top"
+						<img src="public/assets/images/peruibefundo.jpg" class="card-img-top"
 							alt="Palm Springs Road">
+							<div class="card-img-overlay">
+							<p class="card-title fw-bold text-center text-white"style="background-color: #08283B;   position: absolute; top: .5rem;left: .5rem;font-size: .975rem;line-height: .975rem;width: 35%;padding: 3px 5px;border-radius: 10px;line-height: 26px;"
+								>Comprar</p>
+						</div>
+									<div class="card-img-overlay">
+							<p class="card-title fw-bold text-center text-white"style="background-color: #08283B;   position: absolute; top: .5rem;left: .5rem;font-size: .975rem;line-height: .975rem;width: 35%;padding: 3px 5px;border-radius: 10px;line-height: 26px;"
+								>Alugar</p>
+						</div>
+							
 						<div class="card-body">
+						
 							<div class="price mb-2">
-								<span style="color: #08283B">$1,291,000</span>
+								<span style="color: #08283B">R$900,00</span>
 							</div>
-							<span class="d-block mb-2 text-black-50">5232 Endereco Fake, Ave.
-								21BC</span> <span class="city d-block mb-3">São Paulo, Brasil</span>
-							<p class="card-text">This is a longer card with supporting text
-								below as a natural lead-in to additional content. This content
-								is a little bit longer.</p>
+							<span class="d-block mb-2 text-black-50">Peruíbe -SP.
+								</span> <span class="city d-block mb-3">Peruíbe</span>
 							<a href="#" class="btn text-white"
 								style="background-color: #08283B">Mais detalhes</a> <span
 								class="tipo-imovel" data-tipo="APARTAMENTO"
@@ -420,42 +401,27 @@ color: #000;
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 mt-3">
-					<div class="card h-80 mt-4" id="imovel6">
-						<img src="public/assets/images/casa.jpg" class="card-img-top"
-							alt="Palm Springs Road">
-						<div class="card-body">
-							<div class="price mb-2">
-								<span style="color: #08283B">$1,291,000</span>
-							</div>
-							<span class="d-block mb-2 text-black-50">5232 Endereco Fake, Ave.
-								21BC</span> <span class="city d-block mb-3">São Paulo, Brasil</span>
-							<p class="card-text">This is a longer card with supporting text
-								below as a natural lead-in to additional content. This content
-								is a little bit longer.</p>
-							<a href="#" class="btn text-white"
-								style="background-color: #08283B">Mais detalhes</a> <span
-								class="tipo-imovel" data-tipo="APARTAMENTO"
-								style="display: none;"></span> <span class="bairro"
-								data-bairro="FZ" style="display: none;"></span> <span
-								class="num-quartos" data-quartos="QUATROMAISQUARTOS"
-								style="display: none;"></span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 mt-3">
+				
+				
+				
+			</div>
+	<!-- fim cards imoveis -->
+<div class="row justify-content-center mt-4">
+				<div class="col-md-3 mt-3">
+				
 					<div class="card h-80 mt-4" id="imovel5">
-						<img src="public/assets/images/casa.jpg" class="card-img-top"
+						<img src="public/assets/images/terrenobambi.jpg"  class="card-img-top"
 							alt="Palm Springs Road">
+							<div class="card-img-overlay">
+							<p class="card-title fw-bold text-center text-white"style="background-color: #08283B;   position: absolute; top: .5rem;left: .5rem;font-size: .975rem;line-height: .975rem;width: 35%;padding: 3px 5px;border-radius: 10px;line-height: 26px;"
+								>Comprar</p>
+						</div>
 						<div class="card-body">
 							<div class="price mb-2">
-								<span style="color: #08283B">$1,291,000</span>
+								<span style="color: #08283B">R$110.000,00</span>
 							</div>
-							<span class="d-block mb-2 text-black-50">5232 Endereco Fake, Ave.
-								21BC</span> <span class="city d-block mb-3">São Paulo, Brasil</span>
-							<p class="card-text">This is a longer card with supporting text
-								below as a natural lead-in to additional content. This content
-								is a little bit longer.</p>
+							<span class="d-block mb-2 text-black-50">Parque Residencial Bambi, Guarulhos.
+								</span> <span class="city d-block mb-3">Bambi</span>
 							<a href="#" class="btn text-white"
 								style="background-color: #08283B">Mais detalhes</a> <span
 								class="tipo-imovel" data-tipo="CASA" style="display: none;"></span>
@@ -465,21 +431,51 @@ color: #000;
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 mt-3">
-					<div class="card h-80 mt-4" id="imovel6">
-						<img src="public/assets/images/casa.jpg" class="card-img-top"
+				<div class="col-md-3 mt-3">	
+					<div class="card h-80 mt-4" id="imovel5">
+						<img src="public/assets/images/terreno-itanhaem.jpg" class="card-img-top"
 							alt="Palm Springs Road">
+							<div class="card-img-overlay">
+							<p class="card-title fw-bold text-center text-white"style="background-color: #08283B;   position: absolute; top: .5rem;left: .5rem;font-size: .975rem;line-height: .975rem;width: 35%;padding: 3px 5px;border-radius: 10px;line-height: 26px;"
+								>Comprar</p>
+						</div>
 						<div class="card-body">
 							<div class="price mb-2">
-								<span style="color: #08283B">$1,291,000</span>
+								<span style="color: #08283B">R$100.000,00</span>
 							</div>
-							<span class="d-block mb-2 text-black-50">5232 Endereco Fake, Ave.
-								21BC</span> <span class="city d-block mb-3">São Paulo, Brasil</span>
-							<p class="card-text">This is a longer card with supporting text
-								below as a natural lead-in to additional content. This content
-								is a little bit longer.</p>
+							<span class="d-block mb-2 text-black-50">Nova Itanhaém.
+								</span> <span class="city d-block mb-3">Av Santo Andre, Itanhaém</span>
 							<a href="#" class="btn text-white"
-								style="background-color:#08283B">Mais detalhes</a> <span
+								style="background-color: #08283B">Mais detalhes</a> <span
+								class="tipo-imovel" data-tipo="CASA" style="display: none;"></span>
+							<span class="bairro" data-bairro="SJ" style="display: none;"></span>
+							<span class="num-quartos" data-quartos="DOISQUARTOS"
+								style="display: none;"></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 mt-3">
+					<div class="card h-80 mt-4" id="imovel6">
+						<img src="public/assets/images/peruibefundo.jpg" class="card-img-top"
+							alt="Palm Springs Road">
+							<div class="card-img-overlay">
+							<p class="card-title fw-bold text-center text-white"style="background-color: #08283B;   position: absolute; top: .5rem;left: .5rem;font-size: .975rem;line-height: .975rem;width: 35%;padding: 3px 5px;border-radius: 10px;line-height: 26px;"
+								>Comprar</p>
+						</div>
+									<div class="card-img-overlay">
+							<p class="card-title fw-bold text-center text-white"style="background-color: #08283B;   position: absolute; top: .5rem;left: .5rem;font-size: .975rem;line-height: .975rem;width: 35%;padding: 3px 5px;border-radius: 10px;line-height: 26px;"
+								>Comprar</p>
+						</div>
+							
+						<div class="card-body">
+						
+							<div class="price mb-2">
+								<span style="color: #08283B">R$180.000,00</span>
+							</div>
+							<span class="d-block mb-2 text-black-50">Peruíbe -SP.
+								</span> <span class="city d-block mb-3">Peruíbe</span>
+							<a href="#" class="btn text-white"
+								style="background-color: #08283B">Mais detalhes</a> <span
 								class="tipo-imovel" data-tipo="APARTAMENTO"
 								style="display: none;"></span> <span class="bairro"
 								data-bairro="FZ" style="display: none;"></span> <span
@@ -487,31 +483,36 @@ color: #000;
 								style="display: none;"></span>
 						</div>
 					</div>
+				
+
+				
+				
 				</div>
 			</div>
-		</div>
-	<!-- fim cards imoveis -->
+			</div>
+			
 
 
-<!--  footer -->
- <div class="mt-5 pt-5 pb-5 footer"style="background-color:#141414">
+ 
+ <div class="mt-5 pt-5 pb-5 footer" style="background-color:#141414">
 <div class="container">
   <div class="row">
     <div class="col-sm">
          <img id="img3" src="public/assets/images/logobranco.png">
-          <h6 style="font-size: 100%;" class="pr-5 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </h6>
+          <h6 style="font-size: 100%;" class="pr-5 text-white">Sua casa dos sonhos está a um passo de distância. Conte conosco para encontrar o lar perfeito. Sua satisfação é a nossa prioridade. </h6>
       <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
     </div>
-    <div class="col-sm text-white">
-      <h4 class="mt-lg-0 mt-sm-4">Localização</h4><br>
+    <div class="col-sm text-white mt-3">
+      <h4 class="mt-lg-0 mt-sm-4">Contato</h4><br>
       <h5 style="font-size: 115%;">Amanda Barbosa dos Santos Imobiliária</h5>
       <h5 style="font-size: 115%;">(11) 98328-1626</h5>
       <h5 style="font-size: 115%;">B.s.Amanda@bol.com.br</h5>
     </div>
-    <div class="col-sm">
+    <div class="col-sm mt-3">
+          <h4 class="mt-lg-0 mt-sm-4 text-white">Localização</h4><br>
+    
 <div id="contact" class="map">
-   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d195601.04562769792!2d-75.11803295!3d40.002497999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1401521095201" width="100%" height="200%" style="border:0"></iframe>
-    <br />
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.660504595074!2d-46.3914681!3d-23.4004959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce884f63a47bad%3A0xdbe7735e1d239e49!2sAv.%20Serra%20da%20Mantiqueira%2C%20310%20-%20Vila%20Carmela%20I%2C%20Guarulhos%20-%20SP%2C%2007178-540!5e0!3m2!1spt-BR!2sbr!4v1700695884711!5m2!1spt-BR!2sbr" width="350" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    <br />
     <small>
         <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
     </small>
@@ -519,14 +520,15 @@ color: #000;
 
     </div>    
     </div>
-     <div class="row mt-5">
-    <div class="col copyright">
-      <p class=""><small class="text-white">© 2023 Copyright:
-    <a class="text-white" href="https://hostdeprojetosdoifsp.gru.br/starbridge/home.php" style="text-decoration: none;">StarBridge</a></small></p>
+ <div class="row mt-5 justify-content-center">
+    <div class="col text-center">
+        <p class=""><small class="text-white">© 2023 Copyright:
+            <a class="text-white" href="https://hostdeprojetosdoifsp.gru.br/starbridge/home.php">StarBridge</a></small></p>
     </div>
 </div>
+ 
   </div>
-</div>
+</div> 
 
   <!--  fim footer -->
 	
