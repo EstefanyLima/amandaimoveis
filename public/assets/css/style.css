@@ -1,0 +1,18 @@
+
+body{
+    font-family: 'Red Hat Display', 'Open Sans', sans-serif;
+    background-color: light;
+}
+.img{
+    width: 7%;
+} 
+.img2{
+    width: 8%;
+} 
+#img3{
+ width: 30%;
+} 
+p{
+	color: black;
+}
+

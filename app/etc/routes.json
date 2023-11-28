@@ -1,0 +1,227 @@
+{
+	"home" : { 
+		"path" : "app/views/home.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/erro.php"
+	},
+	"imoveis" : { 
+		"path" : "app/views/imoveis.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+
+	"contato" : { 
+		"path" : "app/views/contato.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"sobrenos" : { 
+		"path" : "app/views/sobrenos.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"anunciarimovel" : { 
+		"path" : "app/views/anunciarimovel.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"contatos/add" : { 
+		"path" : "app/controllers/ctrlContato.php",
+		"sessionKey": [{"idUsuario": true}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	
+	"showContatos" : { 
+		"path" : "app/views/showTableContatos.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"saveClientes" : { 
+		"path" : "app/views/saveClientes.php",
+		"sessionKey": [{"idAdmin": true}],  
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	},
+	
+	"clientes/add" : { 
+		"path" : "app/controllers/CtrlClientes.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+		"showClientes" : { 
+		"path" : "app/views/showTableClientes.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"saveProprietarios" : { 
+		"path" : "app/views/saveProprietarios.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	},
+		"showProprietarios" : { 
+		"path" : "app/views/showTableProprietarios.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"proprietarios/add" : { 
+		"path" : "app/controllers/CtrlProprietario.php",
+		"sessionKey": [{"idUsuario": true}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+		"saveTransacao" : { 
+		"path" : "app/views/saveTransacao.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	},
+		"showTransacao" : { 
+		"path" : "app/views/showTableTransacao.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	},
+		"transacao/add" : { 
+		"path" : "app/controllers/CtrlTransacao.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+		"saveFuncionarios" : { 
+		"path" : "app/views/SaveFuncionarios.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	},
+		"showFuncionarios" : { 
+		"path" : "app/views/showTableFuncionarios.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	},
+		"funcionarios/add" : { 
+		"path" : "app/controllers/CtrlFuncionarios.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	}, 
+    "saveImoveis" : { 
+		"path" : "app/views/saveImoveis.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	},
+		"showImoveis" : { 
+		"path" : "app/views/showTableImovel.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	},
+		"imoveis/add" : { 
+		"path" : "app/controllers/CtrlImovel.php",
+		"sessionKey": [{"idAdmin": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+
+		"gerenciamento" : { 
+		"path" : "app/views/gerenciamento.php",
+		"sessionKey": [{"idAdmin": true}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	}
+	,
+
+		"itanhaem" : { 
+		"path" : "app/views/imovel1.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+
+		"bambi" : { 
+		"path" : "app/views/imovel2.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	} ,
+
+		"TerrenoItanhaem" : { 
+		"path" : "app/views/imovel3.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"  
+	} 
+        ,
+
+		"TerrenoBambi" : { 
+		"path" : "app/views/imovel4.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"  
+	},
+        "login" : { 
+		"path" : "app/views/login.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+     "AreaProprietario" : { 
+		"path" : "app/views/areaproprietario.php",
+		"sessionKey": [{"idUsuarioProp": true}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	 "Casas" : { 
+		"path" : "app/views/casa.php",
+		"sessionKey": [{"idUsuario":false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"Terrenos" : { 
+		"path" : "app/views/terreno.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	}, 
+	"Apartamentos" : { 
+		"path" : "app/views/apartamento.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	
+	"saveImovel" : { 
+		"path" : "app/views/saveImovelProp.php",
+		"sessionKey": [{"idAdmin": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	
+	"imoveisprop/add": {
+		"path" : "app/controllers/CtrlProp.php",
+		"sessionKey": [{"idAdmin": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	
+		"showImoveisProp" : { 
+		"path" : "app/views/showTableImovelProp.php",
+		"sessionKey": [{"idAdmin": false}], 
+		"sanitize"  : {"requestVars" : false, "code" : false, "sql" : false},
+		"errorPath" : "app/views/public_home.php"
+	}
+
+}
+
